@@ -1,19 +1,20 @@
-## Wecome to GitHub Pages
+## Introduction
+Can a robot play beer pong? 
+For a human with decent hand-eye coordination, this game is simple enough to play while intoxicated. However, for a Baxter robot, it is more complicated. We can break down the game of beer pong into three main components. 
 
-You can use the [editor on GitHub](https://github.com/chad-bot/Beer-Pong/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+1. **Computer vision**, to recognize and locate red SOLO cups on a table.
+2. **Path planning**, to aim Baxter's right arm according to the best trajectory.
+3. **Custom end-effector hardware**, to allow Baxter to "throw" a ping-pong ball with consistency and accuracy.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+CHAD's ultimate goal is to be able to play a turn based game against a human adversary. Did we succeed? Read on to find out!
 
-### Markdown
+### Real World Application
+Besides saving the day when your beer pong partner is too drunk to play, CHAD has several useful applications in the robotics industry.
+Our cup detection could be used in places such as laboratories or warehouses, where precise identification of containers and their orientation can help automate the process of moving objects from one place to another. For example, Amazon is greatly automating their fulfillment centers and relying on robots to do simple moving tasks. 
+Our trajectory calculation of the ball makes use of a concept that can be applied to any weapons technology that involves projectiles. For example, a robot can determine if its current position is the best position to take a shot at a certain target, or if it should move itself to another location that allows for a better trajectory.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
+## Header 3
 
 - Bulleted
 - List
