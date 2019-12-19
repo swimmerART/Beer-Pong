@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 Our ultimate goal for this project is to allow a Baxter robot to play beer pong against a human adversary.
 For a human with decent hand-eye coordination, this game is simple enough to play while intoxicated. However, for a Baxter robot, it's much more complicated. We can break down the game of beer pong into three main components. 
 
@@ -7,13 +7,13 @@ For a human with decent hand-eye coordination, this game is simple enough to pla
 3. **Custom end-effector hardware**, to let Baxter "throw" a ping-pong ball with consistency and accuracy.
 
 
-### Real World Application
+#### Real World Application
 Besides saving the day when your beer pong partner is too drunk to play, CHAD has several useful applications in the robotics industry.
 Our cup detection could be used in places such as laboratories or warehouses, where precise identification of containers and their orientation can help automate the process of moving objects from one place to another. For example, Amazon is greatly automating their fulfillment centers and relying on robots to do simple moving tasks. 
 Our trajectory calculation of the ball makes use of a concept that can be applied to any weapons technology that involves projectiles. For example, a robot can determine if its current position is the best position to take a shot at a certain target, or if it should move itself to another location that allows for a better trajectory.
 
 
-## Design
+# Design
 
 ### Criteria
 Before any implementation, we decided that we would judge the success of CHAD on these basic criteria:
@@ -37,7 +37,7 @@ Trajectory calculation: George todo (i have written out the proof of the tangent
 
 
 ### Design choices and trade-offs
-Our first big design choice was to go for a ping pong ball gun instead of having Baxter shoot the ball. We heeded Amay's advice that it is very difficult to simulate a throwing motion using Baxter. This makes the project more focused on vision and path planning, which is what we were more familiar with from previous lab assignments. This decision also introduced a new aspect to the design of our robot: the physics of projectile motion and launch angles.
+Our first big design choice was to go for a ping pong ball gun instead of having Baxter shoot the ball. We heeded Amay's advice that it is very difficult to simulate a throwing motion using Baxter. This makes the project more focused on vision and path planning, which is what we were more familiar with from previous lab assignments. This decision also introduced a new aspect to the design of our robot: the physics of projectile motion.
 
 todo: Ar tag/real sense camera stuff
 
@@ -47,19 +47,28 @@ Any more?
 
 ### Effects of our design choices
 - Robustness: Our vision component (akash can talk about how good chads vision is) 
-- Durability: Using a plastic toy gun seemed unreliable at first, but through our extensive test shots with the gun, we could determine how precise the gun is, and also calculate an initial velocity of the ping pong ball.
+- Durability: Using a plastic toy gun seemed unreliable at first, so we needed to conduct extensive test shots with the gun in order to determine how precise it is, and also calculate an initial velocity of the ping pong ball.
 - Efficiency: Our design is both time and cost efficient. Our decision of using a publisher-subscriber model ensures that CHAD is always listening for target coordinates, which are transferred from the cup detection node to the baxter gripper and arm actuation nodes. CHAD's path planning improves efficieny by only ever moving two joints, the shoulder and the wrist, to aim the arm to a selected cup. The only purchases required were a set of plastic ping pong guns and ping pong balls ($10 on amazon) and red solo cups, which we already had. Other materials (zip ties, rubber bands, tape, etc.) were negligible.
 
 
+# Implementation
 
-```
+## Hardware
+todo: insert gun pic, describe attachment to baxter
+## Software
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Pipeline (system diagram)
 
-### Jekyll Themes
+### Description of steps - shooting the ball once
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/chad-bot/Beer-Pong/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+# Results
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[Video](https://youtu.be/NxHdCN6QJ0c)
+
+
+
+
+
+
+
