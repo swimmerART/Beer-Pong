@@ -2,7 +2,7 @@
 Our ultimate goal for this project is to allow a Baxter robot to play beer pong against a human adversary.
 For a human with decent hand-eye coordination, this game is simple enough to play while intoxicated. However, for a Baxter robot, it's much more complicated. We can break down the game of beer pong into three main components. 
 
-1. **Computer vision**, to recognize and locate red SOLO cups on a table.
+1. **Computer vision**, to recognize and locate red Solo cups on a table.
 2. **Path planning**, to aim Baxter's right arm according to the best trajectory.
 3. **Custom end-effector hardware**, to let Baxter "throw" a ping-pong ball with consistency and accuracy.
 
