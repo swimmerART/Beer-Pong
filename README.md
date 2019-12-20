@@ -1,6 +1,6 @@
 
 # Introduction
-Our ultimate goal for this project is to allow a Baxter robot to play beer pong against a human adversary.
+Our goal for this project was to allow a Baxter robot to play beer pong.
 For a human with decent hand-eye coordination, this game is simple enough to play while intoxicated. However, for a Baxter robot, it's much more complicated. We can break down the game of beer pong into three main components. 
 
 1. **Computer vision**, to recognize and locate red Solo cups on a table.
@@ -9,7 +9,7 @@ For a human with decent hand-eye coordination, this game is simple enough to pla
 
 
 #### Real World Application
-Besides saving the day when your beer pong partner is too drunk to play, CHAD has several useful applications in the robotics industry.
+Besides helping you win at parties, CHAD has several useful applications in the robotics industry.
 Our cup detection could be used in places such as laboratories or warehouses, where precise identification of containers and their orientation can help automate the process of moving objects from one place to another. For example, Amazon is greatly automating their fulfillment centers and relying on robots to do simple moving tasks. 
 Our trajectory calculation of the ball makes use of a concept that can be applied to any weapons technology that involves projectiles. For example, a robot can determine if its current position is the best position to take a shot at a certain target, or if it should move itself to another location that allows for a better trajectory.
 
