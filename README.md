@@ -16,7 +16,7 @@ Our trajectory calculation of the ball makes use of a concept that can be applie
 
 # Design
 
-### Criteria
+## Criteria
 Before any implementation, we decided that we would judge the success of CHAD on these basic criteria:
 
 - Precisely shooting the ping pong ball each turn
@@ -25,19 +25,28 @@ Before any implementation, we decided that we would judge the success of CHAD on
 
 The desired functionality for CHAD is to shoot at different configurations and distances of cup targets. At a medium range, and with 6 cups in a diamond formation, we hoped to achieve a 50% cup hit rate.  We believe this percentage represents our team members’ average sober cup pong ability.
 
-### In depth design (please include pics!!)
+## In depth design (please include pics!!)
 Vision: Akash todo
     
 Hardware: Mina todo
     
 Planning: mina/ayrtun todo
     
-Trajectory calculation: George todo (i have written out the proof of the tangent equation and need to transfer it here)
+### Trajectory calculation: 
+Upon receiving the coordinates of the cup, we use projectile motion equationsto find the appropriate launch angles.\
+First determine the Yaw Angle (ψ)\
+
+![Image](images/)
+
+Pitch Angle (θ)\
+Given the initial velocity of the ball v_i, distance to target ∆d, and height to target ∆z, we can find the pitch angle θ.
+
+![Image](src)
 
 [Link](url) and ![Image](src)
 
 
-### Design choices and trade-offs
+## Design choices and trade-offs
 Our first big design choice was to go for a ping pong ball gun instead of having Baxter shoot the ball. We heeded Amay's advice that it is very difficult to simulate a throwing motion using Baxter. This makes the project more focused on vision and path planning, which is what we were more familiar with from previous lab assignments. This decision also introduced a new aspect to the design of our robot: the physics of projectile motion.
 
 todo: Ar tag/real sense camera stuff
