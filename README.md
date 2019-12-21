@@ -15,8 +15,10 @@ We can break down the game of beer pong into three main problems:
 
 #### Real World Application
 Besides helping you win at parties, CHAD has several useful applications in the robotics industry.
+
 Our cup detection could be used in places such as laboratories or warehouses, where precise identification of containers and their orientation can help automate the process of moving objects from one place to another. For example, Amazon is greatly automating their fulfillment centers and relying on robots to do simple moving tasks. 
-Our trajectory calculation of the ball makes use of a concept that can be applied to any weapons technology that involves projectiles. For example, a robot can determine if its current position is the best position to take a shot at a certain target, or if it should move itself to another location that allows for a better trajectory.
+
+Our trajectory calculation of the ball makes use of a concept that can be applied to any weapons technology that involves projectiles. For instance, a robot can determine if its current position is the best position to take a shot at a certain target, or if it should move itself to another location that allows for a better trajectory.
 
 
 # Design
@@ -138,13 +140,13 @@ Lastly, for the difficulty regarding the offset axis of rotation, While adding a
 # Team
 ## Meet the Team
 
-<img src="images/mina.jpg" width="300"> 
+<img src="images/mina.jpg" width="200"> 
 
 Mina Beshay: Mina is a mechanical engineer and has machine shop experience as well as a strong design background. He created the methods for sending filtered image and cup position data to baxter as well as the overall control loop actuating baxter's joints to the appropriate angles
 
 <img src="images/george.jpg" width="200">
 
-George Wang: George has some experience in ROS and industry experience in python. George wrote code for the gripper calibration and CHAD's trigger pull. He created the diagrams/visuals for this website.
+George Wang: George is a CS major. He likes beer and baxters. He knows python and a bit of ROS. George wrote code for the gripper calibration and CHAD's trigger pull. He wrote most of this website and made the diagrams/visuals on this page.
 
 <img src="images/akash.jpg" width="200">
 
@@ -152,11 +154,11 @@ Akash Gokul: Akash's background is in computer science and machine learning. He 
 
 <img src="images/ayrton.jpg" width="200">
 
-Artun Dalyan: Artun has a background in signal processing as well as feedback systems. Artun helped Akash with vision for detecting target. Also, he worked on the targeting component and derived equations of physics which were coded for the C.H.A.D.Bot.
+Artun Dalyan: Artun has a background in signal processing as well as feedback systems. Artun helped Akash with vision for detecting target. Also, he worked on the targeting component and derived equations of physics which were coded for CHAD.
 
 # Additional Materials
 ## Additional Videos:
-[Additional Videos](https://www.youtube.com/playlist?list=PLZ-IT-baKuPN3qfjerJrOVII1s8dunu5x)
+[Target Practice](https://www.youtube.com/playlist?list=PLZ-IT-baKuPN3qfjerJrOVII1s8dunu5x)
 
 ### Initial velocity calculations of toy gun
 
