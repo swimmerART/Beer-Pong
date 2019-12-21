@@ -144,7 +144,7 @@ Mina Beshay: Mina is a mechanical engineer and has machine shop experience as we
 
 <img src="images/george.jpg" width="200">
 
-George Wang: George is a CS major. He likes beer and baxters. He knows python and a bit of ROS. George wrote code for the gripper calibration and C.H.A.D.Bot's trigger pull. He wrote most of this website and made the diagrams/visuals on this page.
+George Wang: George is a CS major. He likes beer and Baxters. He knows python and a bit of ROS. George wrote code for the gripper calibration and C.H.A.D.Bot's trigger pull. He wrote most of this website and made the diagrams/visuals on this page.
 
 <img src="images/akash.jpg" width="200">
 
