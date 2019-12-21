@@ -114,9 +114,14 @@ Moreover, we had a goal of C.H.A.D.Bot engaging in gameplay against an adversary
 
 # Team
 ## Meet the Team
+
+<img src="images/mina.jpg" width="400">
 * Mina Beshay: Mina is a mechanical engineer and has machine shop experience as well as a strong design background.
+<img src="images/george.jpg" width="400">
 * George Wang: George has some experience in ROS and industry experience in python.
+<img src="images/akash.jpg" width="400">
 * Akash Gokul: Akash's background is in computer science and machine learning. He does research in computer vision.
+<img src="images/artun.jpg" width="400">
 * Artun Dalyan: Artun has a background in signal processing as well as feedback systems.
 
 ## Contributions
@@ -124,6 +129,8 @@ Moreover, we had a goal of C.H.A.D.Bot engaging in gameplay against an adversary
 * George Wang: George wrote code for the gripper calibration and CHAD's trigger pull. He created the diagrams/visuals for this website.
 * Akash Gokul: Akash was in charge of the vision component. He wrote most of the code for the vision component of the project. 
 * Artun Dalyan: Artun helped Akash with vision for detecting target. Also, he worked on the targeting component and derived equations of physics which were coded for the C.H.A.D.Bot.
+
+<img src="images/team.jpg" width="700">
 
 # Additional Materials
 ## Additional Videos:
