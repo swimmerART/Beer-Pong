@@ -43,7 +43,7 @@ First determine the Yaw Angle (ψ). This is simple, once we know the vector of t
 
 <img src="images/yaw.jpg" width="300">
 
-Then calculate the Pitch Angle (θ). We use the projectile motion equation: <img src="images/projectile_motion.jpg" width="200">
+Then calculate the Pitch Angle (θ). We use the projectile motion equation: <img src="images/proj_motion.jpg" width="200">
 Given the initial velocity of the ball in the z direction v_iz, distance to target ∆d, and height to target ∆z, we can find the pitch angle θ.
 
 <img src="images/pitch.jpg" width="300">
@@ -72,6 +72,7 @@ For the targeting, the design choice we made is to set an initial position of th
 
 ## Hardware & Parts
 We ordered a plastic gun from Amazon to be our ping pong ball actuator. We used zip ties and rubber bands to properly secure the gun. We set up red solo cups on a black tablecloth for the targets.
+
 <img src="images/gun_facing.jpg" width = "400"> <img src="images/gun_side_view.jpg" width = "400">
 
 
