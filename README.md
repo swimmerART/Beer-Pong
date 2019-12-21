@@ -14,7 +14,7 @@ We can break down the game of beer pong into three main problems:
 
 
 #### Real World Application
-Besides helping you win at parties, C.H.A.D.Bot has several useful applications in the robotics industry.
+Besides helping you win at parties, CHAD has several useful applications in the robotics industry.
 
 Our cup detection could be used in places such as laboratories or warehouses, where precise identification of containers and their orientation can help automate the process of moving objects from one place to another. For example, Amazon is greatly automating their fulfillment centers and relying on robots to do simple moving tasks. 
 
@@ -24,13 +24,13 @@ Our trajectory calculation of the ball makes use of a concept that can be applie
 # Design
 
 ## Criteria
-Before any implementation, we decided that we would judge the success of C.H.A.D.Bot on these basic criteria:
+Before any implementation, we decided that we would judge the success of CHAD on these basic criteria:
 
 - Precisely shooting the ping pong ball each turn
 - Consistent recognition of cups and calculation of trajectory
 - Robust end-effector hardware.
 
-The desired functionality for C.H.A.D.Bot is to shoot at different configurations and distances of cup targets. At a medium range, and with 6 cups in a diamond formation, we hoped to achieve a 50% cup hit rate.  We believe this percentage represents our team members’ average sober cup pong ability.
+The desired functionality for CHAD is to shoot at different configurations and distances of cup targets. At a medium range, and with 6 cups in a diamond formation, we hoped to achieve a 50% cup hit rate.  We believe this percentage represents our team members’ average sober cup pong ability.
 
 ## In depth design
 ### Vision
@@ -72,11 +72,11 @@ For the targeting, the design choice we made is to set an initial position of th
 ### Effects of our design choices
 - Robustness: The vision component works efficiently for a fixed configuration, as it has parameters (e.g. cropping) which are specific to the cup configuration. However, once that is set, from our experiments, we have seen that it identifies cups and the targetting points effectively and efficiently.
 - Durability: Using a plastic toy gun seemed unreliable at first, so we needed to conduct extensive test shots with the gun in order to determine how precise it is, and also calculate an initial velocity of the ping pong ball.
-- Efficiency: Our design is both time and cost efficient. Our decision of using a publisher-subscriber model ensures that C.H.A.D.Bot is always listening for target coordinates, which are transferred from the cup detection node to the baxter gripper and arm actuation nodes. C.H.A.D.Bot's path planning improves efficieny by only ever moving two joints, the shoulder and the wrist, to aim the arm to a selected cup. The only purchases required were a set of plastic ping pong guns and ping pong balls ($10 on amazon) and red solo cups, which we already had. Other materials (zip ties, rubber bands, tape, etc.) were negligible.
+- Efficiency: Our design is both time and cost efficient. Our decision of using a publisher-subscriber model ensures that CHAD is always listening for target coordinates, which are transferred from the cup detection node to the baxter gripper and arm actuation nodes. CHAD's path planning improves efficieny by only ever moving two joints, the shoulder and the wrist, to aim the arm to a selected cup. The only purchases required were a set of plastic ping pong guns and ping pong balls ($10 on amazon) and red solo cups, which we already had. Other materials (zip ties, rubber bands, tape, etc.) were negligible.
 
 In terms of robustness and durability of the project, we were limited to Baxter's capabilities. One problem we are facing is the oscillation of the arm. Thus, there is a period of time that we need to wait so that it stabilizes. The end effector we added is robust and durable with the help off the zip ties and the rubber bands attached to the plastic gun. The recoil of the gun does not affect our targeting.
     
-Moreover, in terms of efficiency, the process we created to set the offset angle for the pitch makes was very inefficient. However, the design can be improved by enhancing C.H.A.D.Bot's vision so that robot can optimize the angle by the feedback from how far the ball goes. But looking at what we did for vision, how we detect the target is very efficient because of our decision to crop the image to get rid of the unnecessary noise and lower computation time but limits our view to fit only about 6 cups.
+Moreover, in terms of efficiency, the process we created to set the offset angle for the pitch makes was very inefficient. However, the design can be improved by enhancing CHAD's vision so that robot can optimize the angle by the feedback from how far the ball goes. But looking at what we did for vision, how we detect the target is very efficient because of our decision to crop the image to get rid of the unnecessary noise and lower computation time but limits our view to fit only about 6 cups.
 
 # Implementation
 
@@ -111,9 +111,9 @@ With the gun in place, a subscriber controlling and tracking the status of the g
 
 
 # Results
-Our project worked well. In our proposal, we aimed for C.H.A.D.Bot's accuracy to be greater than 50%, through all of our tests we averaged about 65% accuracy. The main action we expected to perform was to able to show the target on the Baxter whenever we started the code and also make a shot which goes inside the red solo cup. We have achieved these two tasks during our demo.
+Our project worked well. In our proposal, we aimed for CHAD's accuracy to be greater than 50%, through all of our tests we averaged about 65% accuracy. The main action we expected to perform was to able to show the target on the Baxter whenever we started the code and also make a shot which goes inside the red solo cup. We have achieved these two tasks during our demo.
 
-The video below shows C.H.A.D.Bot hitting 5 cups out of 6 shots, an 83% hit rate.
+The video below shows CHAD hitting 5 cups out of 6 shots, an 83% hit rate.
 
 ## Video
 
@@ -122,7 +122,7 @@ alt="Video" width="500" border="10" /></a>
 
 # Conclusion
 ## Discussion of Results
-On average, our accuracy meets our base goal of 50%. Unfortunately, we were never able to have it successfully shoot all 6 cups in one continuous session due to various errors, e.g. MoveIt planner failing, tracking of AR tag being lost midway, Realsense connection loss, etc. However, we have videos, linked in the Additional Materials section, of it being able to target and shoot most of the 6 cups, individually. Thus, we have confidence that outside of said errors, C.H.A.D.Bot could maintain our desired accuracy over all 6 cups, continuously.
+On average, our accuracy meets our base goal of 50%. Unfortunately, we were never able to have it successfully shoot all 6 cups in one continuous session due to various errors, e.g. MoveIt planner failing, tracking of AR tag being lost midway, Realsense connection loss, etc. However, we have videos, linked in the Additional Materials section, of it being able to target and shoot most of the 6 cups, individually. Thus, we have confidence that outside of said errors, CHAD could maintain our desired accuracy over all 6 cups, continuously.
 
 ## Difficulties
 The noise due to the computer vision created some difficulties for finding the target. We were also unable to better tune the PID controller for the baxter, so each motion involved oscillations that we had to manually wait for. Other issues is that the pitch angle calculations do not account for the offset between the wrist axis of rotation and the the gun's tip. The last difficulty we faced was that both fingers moved to close the gripper, mounting the gun rigidly to only one finger without jamming the other resulted in a substantial amount of duct tape and zip ties.
@@ -131,7 +131,7 @@ The noise due to the computer vision created some difficulties for finding the t
 
 One hack in our solution is the cropping of the frames within the vision component. While this simplified our image processing, since we only had at most 6 cups, it is not immediately generalizable to games with a large number of cups. Currently, to accommodate a greater number of cups we would have to change the cropping dimension, but a clearer, less-hacky solution is definitely possible. Specifically, we could experiment with the use of more noise reduction methods such as erosion and dilation, e.g. using larger kernels than that of which we currently use, image blurring, etc. Also we use a specific mask on the images, one that only saves pixels which are red or white, as we had a fixed color of the cups. We could experiment with avoiding this step and directly detecting the cups based on the contours and their relative area in the picture. This would allow the system to generalize to different types and colors of cups.
     
-Moreover, we had a goal of C.H.A.D.Bot engaging in gameplay against an adversary. While we can still accomplish this through manual execution of the launch files, we were imagining having a GUI for such gameplay and using our drunk noise function which would add noise to the vision component for each point scored by the opponent. Unfortunately, due to our struggles testing C.H.A.D.Bot when he was sober, we were unable to test such additional functionality. Ideally, we would test the drunk noise function and implement a GUI to fix this weakness. 
+Moreover, we had a goal of CHAD engaging in gameplay against an adversary. While we can still accomplish this through manual execution of the launch files, we were imagining having a GUI for such gameplay and using our drunk noise function which would add noise to the vision component for each point scored by the opponent. Unfortunately, due to our struggles testing CHAD when he was sober, we were unable to test such additional functionality. Ideally, we would test the drunk noise function and implement a GUI to fix this weakness. 
     
 Lastly, for the difficulty regarding the offset axis of rotation, While adding an offset worked, it was more of a work around. A more robust solution would have required adjusting multiple arm angles such that the orientation of the gun's tip changed to the appropriate pitch angle while the overall position of the ping pong ball remained unchanged, allowing the gun to "turn on a dime." However, since reliably attaching the gun to Baxter in a consistent manner with human hands is impossible, adding a a computer vision element to track the ping pong ball's landing and path would ensure robustness. Given more time, implementing such an addition would allow Baxter to correct itself and even account for other launch methods (so long as they have a consistent initial velocity).
 
@@ -144,7 +144,7 @@ Mina Beshay: Mina is a mechanical engineer and has machine shop experience as we
 
 <img src="images/george.jpg" width="200">
 
-George Wang: George is a CS major. He likes beer and baxters. He knows python and a bit of ROS. George wrote code for the gripper calibration and C.H.A.D.Bot's trigger pull. He wrote most of this website and made the diagrams/visuals on this page.
+George Wang: George is a CS major. He likes beer and baxters. He knows python and a bit of ROS. George wrote code for the gripper calibration and CHAD's trigger pull. He wrote most of this website and made the diagrams/visuals on this page.
 
 <img src="images/akash.jpg" width="200">
 
@@ -152,7 +152,7 @@ Akash Gokul: Akash's background is in computer science and machine learning. He 
 
 <img src="images/ayrton.jpg" width="200">
 
-Artun Dalyan: Artun has a background in signal processing as well as feedback systems. Artun helped Akash with vision for detecting target. Also, he worked on the targeting component and derived equations of physics which were coded for C.H.A.D.Bot.
+Artun Dalyan: Artun has a background in signal processing as well as feedback systems. Artun helped Akash with vision for detecting target. Also, he worked on the targeting component and derived equations of physics which were coded for CHAD.
 
 # Additional Materials
 ## Additional Videos:
@@ -170,7 +170,7 @@ Results:
  Code for our project can be found [here](https://github.com/chad-bot/CHADBot) (github.com/chad-bot/CHADBot).
  
 ## Happy Holidays!
-Love, C.H.A.D.Bot
+Love, CHAD
 
 <img src="images/team.jpg" width="700">
 
