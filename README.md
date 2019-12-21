@@ -138,7 +138,7 @@ Lastly, for the difficulty regarding the offset axis of rotation, While adding a
 # Team
 ## Meet the Team
 
-<img src="images/mina.jpg" width="200"> 
+<img src="images/mina.jpg" width="300"> 
 
 Mina Beshay: Mina is a mechanical engineer and has machine shop experience as well as a strong design background. He created the methods for sending filtered image and cup position data to baxter as well as the overall control loop actuating baxter's joints to the appropriate angles
 
@@ -160,11 +160,11 @@ Artun Dalyan: Artun has a background in signal processing as well as feedback sy
 
 ### Initial velocity calculations of toy gun
 
-[Video](https://youtu.be/7xTkK3VTanw)
+[Gun Video](https://youtu.be/7xTkK3VTanw)
 
 Results:
 
-<img src="images/gun_calc.jpg" width="200">
+<img src="images/gun_calc.jpg" width="600">
 
 ## Code
  Code for our project can be found [here](https://github.com/chad-bot/CHADBot) (github.com/chad-bot/CHADBot).
