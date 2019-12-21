@@ -73,7 +73,7 @@ todo: insert gun pic, describe attachment to baxter
 
 
 # Results
-[![Video](https://img.youtube.com/vi/NxHdCN6QJ0c&feature=youtu.be/0.jpg)](https://www.youtube.com/watch?v=NxHdCN6QJ0c&feature=youtu.be)
+[![Video](https://i3.ytimg.com/vi/NxHdCN6QJ0c/maxresdefault.jpg)](https://www.youtube.com/watch?v=NxHdCN6QJ0c&feature=youtu.be)
 [Video Link (in case the link above doesn't work](https://youtu.be/NxHdCN6QJ0c)
 
 
