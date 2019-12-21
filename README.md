@@ -30,7 +30,7 @@ Our trajectory calculation of the ball makes use of a concept that can be applie
 ## Criteria
 Before any implementation, we decided that we would judge the success of CHAD on these basic criteria:
 
-- Precisely shooting the ping pong ball each turn
+- Precisely launching the ping pong ball each turn
 - Consistent recognition of cups and calculation of trajectory
 - Robust end-effector hardware.
 
