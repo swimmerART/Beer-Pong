@@ -91,11 +91,8 @@ Our project worked well. In our proposal, we aimed for C.H.A.D.Bot's accuracy to
 
 ## Video
 
-<a href="https://youtu.be/vgKuwmRlPrg" target="_blank"><img src="http://img.youtube.com/vi/vgKuwmRlPr/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-
-<img src="images/thumbnail.jpg" width="400">
-[Video Link](https://youtu.be/NxHdCN6QJ0c)
+<a href="https://youtu.be/vgKuwmRlPrg" target="_blank"><img src="images/thumbnail.jpg" 
+alt="Video" width="240" height="180" border="10" /></a>
 
 # Conclusion
 ## Discussion of Results
