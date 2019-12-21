@@ -92,7 +92,7 @@ Our project worked well. In our proposal, we aimed for C.H.A.D.Bot's accuracy to
 ## Video
 
 <a href="https://youtu.be/vgKuwmRlPrg" target="_blank"><img src="images/thumbnail.jpg" 
-alt="Video" width="500 border="10" /></a>
+alt="Video" width="240" height="180" border="10" /></a>
 
 # Conclusion
 ## Discussion of Results
@@ -124,7 +124,7 @@ Moreover, we had a goal of C.H.A.D.Bot engaging in gameplay against an adversary
 
 # Additional Materials
 ## Additional Videos:
-[Additional Videos](https://youtu.be/GQCobJXRqzg)
+[Additional Videos](https://www.youtube.com/playlist?list=PLZ-IT-baKuPN3qfjerJrOVII1s8dunu5x)
 
 ## Code
  Code for our project can be found [here](https://github.com/chad-bot/CHADBot) (github.com/chad-bot/CHADBot).
