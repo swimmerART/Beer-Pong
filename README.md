@@ -185,7 +185,7 @@ Code for our project can be found [here](https://github.com/chad-bot/CHADBot) (g
 Code for this [website.](https://github.com/chad-bot/Beer-Pong)
  
 ## Happy Holidays!
-Love, CHAD. December 2019
+Love, CHAD. *December 2019*
 
 <img src="images/team.jpg" width="700">
 
