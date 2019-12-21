@@ -3,7 +3,6 @@ alt="Video" width="800" border="10" /></a>
 
 # Introduction
 Our goal for this project was to allow a Baxter robot to play beer pong.
-For a human with decent hand-eye coordination, this game is simple enough to play while intoxicated. However, for a Baxter robot, things are more complicated. 
 
 Our project is most interesting in the way our sensing/vision component translates to actuation. Without using multiple AR-tags, we have to detect a the position and orientation of 6 red cups on a table in order to properly aim the robot. Other intriguing parts of our project are the modeling and the hardware. We model a ball's projectile motion based on its angle and initial velocity, which was calculated using data from test shots of our gun. 
     
