@@ -70,6 +70,8 @@ Our main trade-off was our end-effector, which was used to achieve the throwing 
 	
 For the vision, we decided to use a Intel RealSense camera. In order to focus on the target, we cropped the image that is received from the camera. This is because we wanted to reduce noise and computation time. This design choice helped us focus on the target while reducing the number of pixels the code had to process.        
     
+<img src="images/vision_projection.jpg" width="400">
+
 For the targeting, the design choice we made is to set an initial position of the robot arms with the gun at a fixed distance away from the shoulder. We wanted to aim at the target both using a pitch angle to control how far the ball travels as well as a yaw angle to set the direction of travel. For the yaw angle we aligned the end-effector with the robot's shoulder so that changing the angle at shoulder joint would linearly control the yaw angle. We tried to control the pitch with the second wrist angle; however, because the gun was always attached at an offset relative to the wrist's axis of rotation, we had to compromise by adding an offset to the pitch angle θ.
 
 ### Effects of our design choices
@@ -168,6 +170,11 @@ Artun Dalyan: Artun has a background in signal processing as well as feedback sy
 
 ## Code
  Code for our project can be found [here](https://github.com/chad-bot/CHADBot) (github.com/chad-bot/CHADBot).
+ 
+## Happy Holidays!
+- Love, CHAD
+
+<img src="images/selfie.jpg" width="400">
 
 
 
