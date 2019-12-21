@@ -36,12 +36,12 @@ Planning: mina/ayrtun todo
 Upon receiving the coordinates of the cup, we use projectile motion equationsto find the appropriate launch angles.\
 First determine the Yaw Angle (ψ)\
 
-![Image](images/)
+![Image](images/yaw.jpg)
 
 Pitch Angle (θ)\
 Given the initial velocity of the ball v_i, distance to target ∆d, and height to target ∆z, we can find the pitch angle θ.
 
-![Image](src)
+![Image](images/pitch.jpg)
 
 [Link](url) and ![Image](src)
 
