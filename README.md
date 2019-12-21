@@ -72,7 +72,7 @@ For the targeting, the design choice we made is to set an initial position of th
 
 ## Hardware & Parts
 We ordered a plastic gun from Amazon to be our ping pong ball actuator. We used zip ties and rubber bands to properly secure the gun. We set up red solo cups on a black tablecloth for the targets.
-<img src="images/gun_facing" width = "400"> <img src="images/gun_side_view.jpg" width = "400">
+<img src="images/gun_facing.jpg" width = "400"> <img src="images/gun_side_view.jpg" width = "400">
 
 
 ## Software
