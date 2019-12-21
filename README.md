@@ -44,7 +44,7 @@ First determine the Yaw Angle (ψ). This is simple, once we know the vector of t
 <img src="images/yaw.jpg" width="300">
 
 Then calculate the Pitch Angle (θ). We use the projectile motion equation: <img src="images/projectile_motion.jpg" width="200">
-Given the initial velocity of the ball v_i, distance to target ∆d, and height to target ∆z, we can find the pitch angle θ.
+Given the initial velocity of the ball in the z direction v_iz, distance to target ∆d, and height to target ∆z, we can find the pitch angle θ.
 
 <img src="images/pitch.jpg" width="300">
 
