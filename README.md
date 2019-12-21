@@ -164,17 +164,16 @@ Artun Dalyan: Artun has a background in signal processing as well as feedback sy
 
 Results:
 
-<img src="images/gun_calc.jpg" width="600">
+<img src="images/gun_calc.jpg" width="800">
 
 ## Code
  Code for our project can be found [here](https://github.com/chad-bot/CHADBot) (github.com/chad-bot/CHADBot).
  
 ## Happy Holidays!
-- Love, CHAD
+Love, CHAD
 
 <img src="images/team.jpg" width="700">
 
-<img src="images/selfie.jpg" width="400">
 
 
 
