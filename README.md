@@ -89,7 +89,7 @@ Our project worked well. In our proposal, we aimed for C.H.A.D.Bot's accuracy to
 
 # Conclusion
 ## Discussion of Results
-On average our accuracy meet our base goal of 50%. Unfortunately, we were never able to have it shoot all 6 cups continuously due to various errors, e.g. MoveIt failing, tracking of AR tag being lost midway, etc. However, we have videos, linked in the Additional Materials section, of it being able to target and shoot most of the 6 cups, individually. Thus, we have confidence that outside of said errors, C.H.A.D.Bot could maintain our desired accuracy over all 6 cups, continuously. 
+On average our accuracy meet our base goal of 50%. Unfortunately, we were never able to have it shoot all 6 cups continuously due to various errors, e.g. MoveIt failing, tracking of AR tag being lost midway, etc. However, we have videos, linked in the Additional Materials section, of it being able to target and shoot a select few of the 6 cups, individually. Thus, we have confidence that outside of said errors, C.H.A.D.Bot could maintain our desired accuracy over all 6 cups, continuously. 
 
 ## Difficulties
 ***TBD***
