@@ -41,15 +41,15 @@ Planning: mina/ayrtun todo
 Upon receiving the coordinates of the cup.
 First determine the Yaw Angle (ψ). This is simple, once we know the vector of the arm, and the desired target vector at the center of a cup.
 
-<img src="images/yaw.jpg" width="400">
+<img src="images/yaw.jpg" width="300">
 
-Then calculate the Pitch Angle (θ). We use the projectile motion equation 
+Then calculate the Pitch Angle (θ). We use the projectile motion equation: <img src="images/projectile_motion.jpg" width="300">
 Given the initial velocity of the ball v_i, distance to target ∆d, and height to target ∆z, we can find the pitch angle θ.
 
-<img src="images/pitch.jpg" width="400">
+<img src="images/pitch.jpg" width="300">
 
 Solving this quadratic equation gives us the pitch angle theta. 
-<img src="images/pitch_latex.jpg" width="400">
+<img src="images/pitch_latex.jpg" width="300">
 
 Derivation can be found here:
 
