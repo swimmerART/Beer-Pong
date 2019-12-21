@@ -57,14 +57,15 @@ We can find ψ using a cosine relationship.  <img src="images/yaw_latex.jpg" wid
 "cup" is the vector from the base to the target, projected on the xy-plane. "gun" is the vector from the base to the gun's current position, projected onto the xy-plane.
 
 After CHAD's shoulder is rotated by ψ, we calculate the Pitch Angle (θ) for the wrist. We use the projectile motion equation: <img src="images/proj_motion.jpg" width="200">
+
 Given the initial velocity of the ball in the z direction v_iz, distance to target ∆d, and height to target ∆z, we can find the pitch angle θ.
 
-<img src="images/pitch.jpg" width="300">
+<img src="images/pitch.jpg" width="400">
 
 Solving this quadratic equation gives us the pitch angle θ. 
 <img src="images/pitch_latex.jpg" width="500">
 
-Derivation can be found here:
+The derivation can be found here:
 
 <img src="images/pitch_proof.jpg" width="400">
 
