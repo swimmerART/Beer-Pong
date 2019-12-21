@@ -1,5 +1,5 @@
-<a href="https://youtu.be/NxHdCN6QJ0c" target="_blank"><img src="images/thumbnail.jpg" 
-alt="Video" width="500" border="10" /></a>
+<a href="https://youtu.be/NxHdCN6QJ0c" target="_blank"><img src="images/team.jpg" 
+alt="Video" width="800" border="10" /></a>
 
 # Introduction
 Our goal for this project was to allow a Baxter robot to play beer pong.
