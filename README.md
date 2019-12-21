@@ -1,5 +1,5 @@
-<a href="https://youtu.be/NxHdCN6QJ0c" target="_blank"><img src="images/team.jpg" 
-alt="Video" width="800" border="10" /></a>
+<a href="https://youtu.be/NxHdCN6QJ0c" target="_blank"><img src="images/long_thumbnail.jpg" 
+alt="Video" width="600" border="10" /></a>
 
 # Introduction
 The goal for this project is to allow a Baxter robot to play beer pong.
@@ -128,6 +128,7 @@ Moreover, we had a goal of C.H.A.D.Bot engaging in gameplay against an adversary
 # Additional Materials
 ## Additional Videos:
 [Additional Videos](https://www.youtube.com/playlist?list=PLZ-IT-baKuPN3qfjerJrOVII1s8dunu5x)
+[Initial velocity calculation of plastic gun](https://youtu.be/7xTkK3VTanw)
 
 ## Code
  Code for our project can be found [here](https://github.com/chad-bot/CHADBot) (github.com/chad-bot/CHADBot).
