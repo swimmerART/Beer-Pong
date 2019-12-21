@@ -2,15 +2,19 @@
 alt="Video" width="600" border="10" /></a>
 
 # Introduction
-We wanted to make a Baxter robot play beer pong.
+Controlled Highly Accurate Deadeye, or CHAD, is a robot that plays beer pong.
 
-Our project is most interesting in the way our sensing/vision component translates to robot actuation. Without using multiple AR-tags, we have to detect the position and orientation of 6 red cups on a table in order to properly aim the robot. Other intriguing parts of our project are the modeling and the hardware. We model a ball's projectile motion based on its angle and initial velocity, which was calculated using data from test shots of our gun. 
+Before building CHAD, we had two simple goals in mind. 
+- Enable a baxter robot to recognize a red Solo cup and launch a ping pong ball at it.
+- As CHAD's accuracy increases, we want it to be able to engage in a turn-based game with multiple cups, against a human adversary.
     
 We can break down the game of beer pong into three main problems: 
 
 1. **Computer vision**, to recognize and locate red Solo cups on a table.
 2. **Path planning**, to aim Baxter's right arm according to the best trajectory.
 3. **Custom end-effector hardware**, to let Baxter "throw" a ping-pong ball with consistency and accuracy.
+
+Our team found this project interesting because of its precise nature. Cups are small targets, and once the ball is in the air, there's nothing more we can do. This means our sensing (vision) must be robust, joint planning exact, and that we needed to be creative with our hardware, since Baxter cannot "throw" a ball like a human can. We also needed to tackle the challenge of projectile motion.
 
 
 #### Real World Application
@@ -33,11 +37,18 @@ Before any implementation, we decided that we would judge the success of CHAD on
 The desired functionality for CHAD is to shoot at different configurations and distances of cup targets. At a medium range, and with 6 cups in a diamond formation, we hoped to achieve a 50% cup hit rate.  We believe this percentage represents our team members’ average sober cup pong ability.
 
 ## In depth design
+
+### Hardware design:
+Our hardware consisted of one toy plastic [ping-pong gun](https://www.amazon.com/Toyvian-Shooting-Child-Random-Color/dp/B07NVCM5VK) (attached to Baxter's right arm gripper), solo cups, and a table cover. We specifically choose red solo cups and a black table cover both for the traditional aesthetic and their computer-vision friendly color contrast. Having the distinctive separation between the red exterior, white interior, and dark background allowed us to remove a lot of the noise from the image without having to create more complex vision detection algorithms. Even though we considered other means of launching the ping-pong ball at the target (ranging from rubber band sling shots to air powered cannons) we settled on the ping-pong gun because of how easy it was to modify, repair, or even replace when one inevitably broke.
+
 ### Vision
-For the vision component, we used an Intel RealSense camera and image processing to identify cups within the frame. Then for each cup we compute a center coordinate, corresponding to the center point of the circle created by the rim of each cup. We then return the coordinates of this point to the targeting component.
+For the vision component, we use an Intel RealSense camera and image processing to identify cups within the frame. Then for each cup we compute a center coordinate, corresponding to the center point of the circle created by the rim of each cup. We then return the coordinates of this point (in the camera frame) to the targeting component.
+
+### Targeting
+We place an AR-tag next to the cups on the table, not to provide a target, but rather to sync the coordinate frames of our RealSense camera and Baxter's camera. This effectively translates the point we receive from the Vision component, from the RealSense camera frame, to Baxter's frame. Now CHAD knows where to aim.
     
 ### Trajectory calculation: 
-Upon receiving the coordinates of the cup, we first determine the Yaw Angle Psi (ψ). 
+Upon receiving the coordinates of the cup in Baxter's frame, we first determine the required Yaw Angle Psi (ψ). 
 
 <img src="images/yaw.jpg" width="300">
 
@@ -45,20 +56,19 @@ We can find ψ using a cosine relationship.  <img src="images/yaw_latex.jpg" wid
 
 "cup" is the vector from the base to the target, projected on the xy-plane. "gun" is the vector from the base to the gun's current position, projected onto the xy-plane.
 
-Then calculate the Pitch Angle (θ). We use the projectile motion equation: <img src="images/proj_motion.jpg" width="200">
+After CHAD's shoulder is rotated by ψ, we calculate the Pitch Angle (θ) for the wrist. We use the projectile motion equation: <img src="images/proj_motion.jpg" width="200">
 Given the initial velocity of the ball in the z direction v_iz, distance to target ∆d, and height to target ∆z, we can find the pitch angle θ.
 
 <img src="images/pitch.jpg" width="300">
 
-Solving this quadratic equation gives us the pitch angle theta. 
+Solving this quadratic equation gives us the pitch angle θ. 
 <img src="images/pitch_latex.jpg" width="500">
 
 Derivation can be found here:
 
 <img src="images/pitch_proof.jpg" width="400">
 
-### Hardware design:
-Our hardware consisted of one ping pong gun, solo cups, and a table cover. We specifically choose red solo cups and a black table cover both for the traditional aesthetic and their computer-vision friendly color contrast. Having the distinctive separation between the red exterior, white interior, and dark background allowed us to remove a lot of the noise from the image without having to create more complex vision detection algorithms. Even though we considered other means of launching the ping-pong ball at the target (ranging from rubber band sling shots to air powered cannons) we settled on the ping-pong gun because of how easy it was to modify, repair, or even replace when one inevitably broke.
+Finally, CHAD can launch the ping-pong ball by squeezing the trigger on the ping-pong gun.
 
 ## Design choices and trade-offs
 Our main trade-off was our end-effector, which was used to achieve the throwing action of the ball by the robot. Using a plastic gun helped us achieve initialization of the force acting on the ball. Otherwise, it was very difficult to give initial velocity to the ball by mimicking human throwing action based on the torque that is achieved by the arm movements. However, the gun was not very stable and consistency of the velocity generated by the gun is questionable.
