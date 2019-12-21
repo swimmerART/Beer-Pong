@@ -64,7 +64,7 @@ Our main trade-off was our end-effector, which was used to achieve the throwing 
 	
 For the vision, we decided to use a Intel RealSense camera. In order to focus on the target, we cropped the image that is received from the camera. This is because we wanted to reduce noise and computation time. This design choice helped us focus on the target while reducing the number of pixels the code had to process.        
     
-<img src="images/vision_projection.jpg" width="400">
+<img src="images/vision_projection.jpg" width="250">
 
 For the targeting, the design choice we made is to set an initial position of the robot arms with the gun at a fixed distance away from the shoulder. We wanted to aim at the target both using a pitch angle to control how far the ball travels as well as a yaw angle to set the direction of travel. For the yaw angle we aligned the end-effector with the robot's shoulder so that changing the angle at shoulder joint would linearly control the yaw angle. We tried to control the pitch with the second wrist angle; however, because the gun was always attached at an offset relative to the wrist's axis of rotation, we had to compromise by adding an offset to the pitch angle θ.
 
@@ -80,7 +80,7 @@ Moreover, in terms of efficiency, the process we created to set the offset angle
 # Implementation
 
 ## Hardware & Parts
-We ordered a plastic gun from Amazon to be our ping pong ball actuator. However, we still needed to do two things for it to work: 1. Determine how to attach the gun to Baxter. 2. Conduct tests to calculate the average initial velocity of the ball when shot out of our gun. We used zip ties and rubber bands to properly secure the gun. 
+We ordered a plastic gun from Amazon to be our ping pong ball actuator. However, we still needed to do two things for it to work: 1. Determine how to attach the gun to Baxter. 2. Conduct tests to calculate the average initial velocity of the ball when shot out of our gun. We used zip ties and rubber bands to properly secure the gun. Our test results are available at the bottom of this page. 
 
 <img src="images/gun_facing.jpg" width = "400"> <img src="images/gun_side_view.jpg" width = "400">
 
@@ -155,19 +155,25 @@ Akash Gokul: Akash's background is in computer science and machine learning. He 
 
 Artun Dalyan: Artun has a background in signal processing as well as feedback systems. Artun helped Akash with vision for detecting target. Also, he worked on the targeting component and derived equations of physics which were coded for the C.H.A.D.Bot.
 
-
-<img src="images/team.jpg" width="700">
-
 # Additional Materials
 ## Additional Videos:
 [Additional Videos](https://www.youtube.com/playlist?list=PLZ-IT-baKuPN3qfjerJrOVII1s8dunu5x)
-[Initial velocity calculation of plastic gun](https://youtu.be/7xTkK3VTanw)
+
+### Initial velocity calculations of toy gun
+
+[Video](https://youtu.be/7xTkK3VTanw)
+
+Results:
+
+<img src="images/gun_calc.jpg" width="200">
 
 ## Code
  Code for our project can be found [here](https://github.com/chad-bot/CHADBot) (github.com/chad-bot/CHADBot).
  
 ## Happy Holidays!
 - Love, CHAD
+
+<img src="images/team.jpg" width="700">
 
 <img src="images/selfie.jpg" width="400">
 
