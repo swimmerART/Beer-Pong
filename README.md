@@ -171,7 +171,7 @@ Artun Dalyan: Artun has a background in signal processing as well as feedback sy
 
 ### Initial velocity calculations of toy gun
 
-[Gun Video.](https://youtu.be/7xTkK3VTanw) Method used: same projectile motion equation as mentioned above. Keeping the pitch angle at 0 degrees, we measure height and distance traveled.
+[Gun Videos.](https://youtu.be/7xTkK3VTanw) Method used: same projectile motion equation as mentioned above. Keeping the pitch angle at 0 degrees, we measure height and distance traveled.
 
 Results: (we used the average of 12 test shots to come up with an initial velocity of 3.27 m/s)
 
