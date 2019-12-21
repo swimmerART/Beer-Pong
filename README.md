@@ -1,5 +1,5 @@
 <a href="https://youtu.be/NxHdCN6QJ0c" target="_blank"><img src="images/long_thumbnail.jpg" 
-alt="Video" width="600" border="10" /></a>
+alt="Video" width="900" border="10" /></a>
 
 # Introduction
 Controlled Highly Accurate Deadeye, or CHAD, is a robot that plays beer pong.
