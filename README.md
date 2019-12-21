@@ -34,8 +34,9 @@ Planning: mina/ayrtun todo
     
 ### Trajectory calculation: 
 Upon receiving the coordinates of the cup, we use projectile motion equationsto find the appropriate launch angles.\
-First determine the Yaw Angle (ψ)\
+First determine the Yaw Angle (ψ)
 
+<img src="images/yaw.jpg" width="100" height="100">
 ![Image](images/yaw.jpg)
 
 Pitch Angle (θ)\
