@@ -2,6 +2,7 @@
 alt="Video" width="800" border="10" /></a>
 
 # Introduction
+---
 Controlled Highly Accurate Deadeye, or CHAD, is a robot that plays beer pong.
 
 Before building CHAD, we had two simple goals in mind. 
@@ -26,7 +27,7 @@ Our trajectory calculation of the ball makes use of a concept that can be applie
 
 
 # Design
-
+---
 ## Criteria
 Before any implementation, we decided that we would judge the success of CHAD on these basic criteria:
 
@@ -82,7 +83,7 @@ For the vision, we decided to use an Intel RealSense camera. In order to focus o
 
 For the targeting, the design choice we made is to set an initial position of the robot arms with the gun at a fixed distance away from the shoulder. We wanted to aim at the target both using a pitch angle to control how far the ball travels as well as a yaw angle to set the direction of travel. For the yaw angle we aligned the end-effector with the robot's shoulder so that changing the angle at shoulder joint would linearly control the yaw angle. We tried to control the pitch with the second wrist angle; however, because the gun was always attached at an offset relative to the wrist's axis of rotation, we had to compromise by adding an offset to the pitch angle θ.
 
-### Effects of our design choices
+## Effects of our design choices
 - Robustness: The vision component works efficiently for a fixed configuration, as it has parameters (e.g. cropping) which are specific to the cup configuration. However, once that is set, from our experiments, we have seen that it identifies cups and the targeting points effectively and efficiently.
 - Durability: Using a plastic toy gun seemed unreliable at first, so we needed to conduct extensive test shots with the gun in order to determine how precise it is, and also calculate an initial velocity of the ping pong ball.
 - Efficiency: Our design is both time and cost efficient. Our decision of using a publisher-subscriber model ensures that CHAD is always listening for target coordinates, which are transferred from the cup detection node to the baxter gripper and arm actuation nodes. CHAD's path planning improves efficiency by only ever moving two joints, the shoulder and the wrist, to aim the arm to a selected cup. The only purchases required were a set of plastic ping pong guns and ping pong balls ($10 on amazon) and red Solo cups, which we already had. Other materials (zip ties, rubber bands, tape, etc.) were negligible.
@@ -92,7 +93,7 @@ In terms of robustness and durability of the project, we were limited to Baxter'
 Moreover, in terms of efficiency, the process we created to set the offset angle for the pitch makes was very inefficient. However, the design can be improved by enhancing CHAD's vision so that robot can optimize the angle by the feedback from how far the ball goes. But looking at what we did for vision, how we detect the target is very efficient because of our decision to crop the image to get rid of the unnecessary noise and lower computation time but limits our view to fit only about 6 cups.
 
 # Implementation
-
+---
 ## Hardware & Parts
 We ordered a plastic gun from Amazon to be our ping pong ball actuator. However, we still needed to do two things for it to work: 1. Determine how to attach the gun to Baxter. 2. Conduct tests to calculate the average initial velocity of the ball when shot out of our gun. We used zip ties and rubber bands to properly secure the gun. Our test results are available at the bottom of this page. 
 
@@ -121,9 +122,8 @@ Then we calculate the two launch angles ψ and θ according to the trajectory al
     
 With the gun in place, a subscriber controlling and tracking the status of the gripper claw is notified to close in order to actuate gun then open on completion of the launch. once the ping pong is shot, we return the arm to the default position to make sure we never block the line of sight for Baxter camera with the shooting arm.
     
-
-
 # Results
+---
 Our project worked well. In our proposal, we aimed for CHAD's accuracy to be greater than 50%, through all of our tests we averaged about 65% accuracy. The main action we expected to perform was to able to show the target on the Baxter whenever we started the code and also make a shot which goes inside the red Solo cup. We have achieved these two tasks during our demo.
 
 The video below shows CHAD hitting 5 cups out of 6 shots, an 83% hit rate.
@@ -134,6 +134,7 @@ The video below shows CHAD hitting 5 cups out of 6 shots, an 83% hit rate.
 alt="Video" width="500" border="10" /></a>
 
 # Conclusion
+---
 ## Discussion of Results
 On average, our accuracy meets our base goal of 50%. Unfortunately, we were never able to have it successfully shoot all 6 cups in one continuous session due to various errors, e.g. MoveIt planner failing, tracking of AR tag being lost midway, RealSense connection loss, etc. However, we have videos, linked in the Additional Materials section, of it being able to target and shoot most of the 6 cups, individually. Thus, we have confidence that outside of said errors, CHAD could maintain our desired accuracy over all 6 cups, continuously.
 
@@ -149,6 +150,7 @@ Moreover, we had a goal of CHAD engaging in gameplay against an adversary. While
 Lastly, for the difficulty regarding the offset axis of rotation, While adding an offset worked, it was more of a work around. A more robust solution would have required adjusting multiple arm angles such that the orientation of the gun's tip changed to the appropriate pitch angle while the overall position of the ping pong ball remained unchanged, allowing the gun to "turn on a dime." However, since reliably attaching the gun to Baxter in a consistent manner with human hands is impossible, adding a computer vision element to track the ping pong ball's landing and path would ensure robustness. Given more time, implementing such an addition would allow Baxter to correct itself and even account for other launch methods (so long as they have a consistent initial velocity).
 
 # Team
+---
 ## Meet the Team
 
 <img src="images/mina.jpg" width="200"> 
@@ -168,6 +170,7 @@ Akash Gokul: Akash's background is in computer science and machine learning. He 
 Artun Dalyan: Artun has a background in signal processing as well as feedback systems. Artun helped Akash with vision for detecting target. Also, he worked on the targeting component and derived equations of physics which were coded for CHAD.
 
 # Additional Materials
+---
 ## Additional Videos:
 [Target Practice](https://www.youtube.com/playlist?list=PLZ-IT-baKuPN3qfjerJrOVII1s8dunu5x)
 
