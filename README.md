@@ -43,9 +43,7 @@ Given the initial velocity of the ball v_i, distance to target ∆d, and height 
 
 <img src="images/pitch.jpg" width="400">
 
-![Image](images/pitch.jpg)
 
-[Link](url) and ![Image](src)
 
 
 ## Design choices and trade-offs
