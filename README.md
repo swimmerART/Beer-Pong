@@ -74,7 +74,7 @@ todo: insert gun pic, describe attachment to baxter
 
 # Results
 [<img src="images/thumbnail.jpg" width="400">](https://www.youtube.com/watch?v=NxHdCN6QJ0c&feature=youtu.be)
-[Video Link (in case the link above doesn't work](https://youtu.be/NxHdCN6QJ0c)
+[Video Link](https://youtu.be/NxHdCN6QJ0c)
 
 
 
