@@ -126,7 +126,7 @@ Moreover, we had a goal of C.H.A.D.Bot engaging in gameplay against an adversary
 
 # Additional Materials
 ## Additional Videos:
-[Additional Videos](https://youtu.be/GQCobJXRqzg)
+[Additional Videos](https://www.youtube.com/playlist?list=PLZ-IT-baKuPN3qfjerJrOVII1s8dunu5x)
 
 ## Code
  Code for our project can be found [here](https://github.com/chad-bot/CHADBot) (github.com/chad-bot/CHADBot).
