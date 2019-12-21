@@ -5,7 +5,7 @@ alt="Video" width="600" border="10" /></a>
 Controlled Highly Accurate Deadeye, or CHAD, is a robot that plays beer pong.
 
 Before building CHAD, we had two simple goals in mind. 
-- Enable a baxter robot to recognize a red Solo cup and launch a ping pong ball at it.
+- Enable a Baxter robot to recognize a red Solo cup and launch a ping pong ball at it.
 - As CHAD's accuracy increases, we want it to be able to engage in a turn-based game with multiple cups, against a human adversary.
     
 We can break down the game of beer pong into three main problems: 
@@ -39,13 +39,13 @@ The desired functionality for CHAD is to shoot at different configurations and d
 ## In depth design
 
 ### Hardware design:
-Our hardware consisted of one toy plastic [ping-pong gun](https://www.amazon.com/Toyvian-Shooting-Child-Random-Color/dp/B07NVCM5VK) (attached to Baxter's right arm gripper), solo cups, and a table cover. We specifically choose red solo cups and a black table cover both for the traditional aesthetic and their computer-vision friendly color contrast. Having the distinctive separation between the red exterior, white interior, and dark background allowed us to remove a lot of the noise from the image without having to create more complex vision detection algorithms. Even though we considered other means of launching the ping-pong ball at the target (ranging from rubber band sling shots to air powered cannons) we settled on the ping-pong gun because of how easy it was to modify, repair, or even replace when one inevitably broke.
+Our hardware consisted of one toy plastic [ping-pong gun](https://www.amazon.com/Toyvian-Shooting-Child-Random-Color/dp/B07NVCM5VK) (attached to Baxter's right arm gripper), Solo cups, and a table cover. We specifically choose red Solo cups and a black table cover both for the traditional aesthetic and their computer-vision friendly color contrast. Having the distinctive separation between the red exterior, white interior, and dark background allowed us to remove a lot of the noise from the image without having to create more complex vision detection algorithms. Even though we considered other means of launching the ping-pong ball at the target (ranging from rubber band sling shots to air powered cannons) we settled on the ping-pong gun because of how easy it was to modify, repair, or even replace when one inevitably broke.
 
 ### Vision
 For the vision component, we use an Intel RealSense camera and image processing to identify cups within the frame. Then for each cup we compute a center coordinate, corresponding to the center point of the circle created by the rim of each cup. We then return the coordinates of this point (in the camera frame) to the targeting component.
 
 ### Targeting
-We place an AR-tag next to the cups on the table, not to provide a target, but rather to sync the coordinate frames of our RealSense camera and Baxter's camera. This effectively translates the point we receive from the Vision component, from the RealSense camera frame, to Baxter's frame. Now CHAD knows where to aim.
+We place an AR-tag next to the cups on the table, not to provide a target, but rather to sync the coordinate frames of our RealSense camera and Baxter's camera. This effectively translates our target point from the RealSense camera frame to Baxter's frame. Now CHAD knows where to aim.
     
 ### Trajectory calculation: 
 Upon receiving the coordinates of the cup in Baxter's frame, we first determine the required Yaw Angle Psi (ψ). 
@@ -82,7 +82,7 @@ For the targeting, the design choice we made is to set an initial position of th
 ### Effects of our design choices
 - Robustness: The vision component works efficiently for a fixed configuration, as it has parameters (e.g. cropping) which are specific to the cup configuration. However, once that is set, from our experiments, we have seen that it identifies cups and the targeting points effectively and efficiently.
 - Durability: Using a plastic toy gun seemed unreliable at first, so we needed to conduct extensive test shots with the gun in order to determine how precise it is, and also calculate an initial velocity of the ping pong ball.
-- Efficiency: Our design is both time and cost efficient. Our decision of using a publisher-subscriber model ensures that CHAD is always listening for target coordinates, which are transferred from the cup detection node to the baxter gripper and arm actuation nodes. CHAD's path planning improves efficiency by only ever moving two joints, the shoulder and the wrist, to aim the arm to a selected cup. The only purchases required were a set of plastic ping pong guns and ping pong balls ($10 on amazon) and red solo cups, which we already had. Other materials (zip ties, rubber bands, tape, etc.) were negligible.
+- Efficiency: Our design is both time and cost efficient. Our decision of using a publisher-subscriber model ensures that CHAD is always listening for target coordinates, which are transferred from the cup detection node to the baxter gripper and arm actuation nodes. CHAD's path planning improves efficiency by only ever moving two joints, the shoulder and the wrist, to aim the arm to a selected cup. The only purchases required were a set of plastic ping pong guns and ping pong balls ($10 on amazon) and red Solo cups, which we already had. Other materials (zip ties, rubber bands, tape, etc.) were negligible.
 
 In terms of robustness and durability of the project, we were limited to Baxter's capabilities. One problem we are facing is the oscillation of the arm. Thus, there is a period of time that we need to wait so that it stabilizes. The end effector we added is robust and durable with the help off the zip ties and the rubber bands attached to the plastic gun. The recoil of the gun does not affect our targeting.
     
@@ -95,7 +95,7 @@ We ordered a plastic gun from Amazon to be our ping pong ball actuator. However,
 
 <img src="images/gun_facing.jpg" width = "400"> <img src="images/gun_side_view.jpg" width = "400">
 
-We also set up red solo cups on a black tablecloth for the targets.
+We also set up red Solo cups on a black tablecloth for the targets.
 
 <img src="images/cups.jpg" width = "400">
 
@@ -121,7 +121,7 @@ With the gun in place, a subscriber controlling and tracking the status of the g
 
 
 # Results
-Our project worked well. In our proposal, we aimed for CHAD's accuracy to be greater than 50%, through all of our tests we averaged about 65% accuracy. The main action we expected to perform was to able to show the target on the Baxter whenever we started the code and also make a shot which goes inside the red solo cup. We have achieved these two tasks during our demo.
+Our project worked well. In our proposal, we aimed for CHAD's accuracy to be greater than 50%, through all of our tests we averaged about 65% accuracy. The main action we expected to perform was to able to show the target on the Baxter whenever we started the code and also make a shot which goes inside the red Solo cup. We have achieved these two tasks during our demo.
 
 The video below shows CHAD hitting 5 cups out of 6 shots, an 83% hit rate.
 
